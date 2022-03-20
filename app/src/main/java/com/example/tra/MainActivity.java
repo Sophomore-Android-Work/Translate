@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.tra.dao.RecordsDao;
 import com.example.tra.history.RecordAdapter;
+import com.example.tra.service.GetValues;
+import com.example.tra.service.TransApi;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -29,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText in;
     private Button sure;
 
-
     private Spinner  spinnerCardNumber_begin;
     private static final String[] m_languages = { "英语", "文言文", "粤语", "中文简体","中文繁体","日语","法语","韩语","西班牙语","泰语","阿拉伯语","俄语","德语" };
     private static final String[] begin_languages = { "英语", "文言文", "粤语", "中文简体","中文繁体","日语","法语","韩语","西班牙语","泰语","阿拉伯语","俄语","德语" };
+
+
     private RecordsDao recordsDao =new RecordsDao(MainActivity.this);
     private List<String> recordsList;
     private TextView clearRecords_tv;//清楚历史记录
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         begin_string();
         String str ="auto";
         String s= translate(str);
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void initView(String str,String lan) {
+    public void initView(String str,String lan) {
         mean=(TextView) findViewById(R.id.mean);
         in=(EditText) findViewById(R.id.in);
         sure=(Button) findViewById(R.id.sure);
@@ -112,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void eJosn(String json) {
+    public void eJosn(String json) {
         try {
             JSONObject jsonObject=new JSONObject(json);
             JSONArray object=jsonObject.getJSONArray("trans_result");
@@ -187,8 +191,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
-    private String begin_string (){
+    public String begin_string (){
 
 
         final String[] lan_begin = new String[1];
@@ -277,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
         return lan_begin[0] ;
     }
 
-    private String translate(String str){
+    public String translate(String str){
 
 
         Spinner spinnerCardNumber = (Spinner)findViewById(R.id.spinner);
@@ -364,4 +367,6 @@ public class MainActivity extends AppCompatActivity {
         });
         return lan[0];
     }
+
+
 }
