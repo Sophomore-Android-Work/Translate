@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--核心配置文件-->
+<configuration>
+
+
+<!--     引入外部配置文件  -->
+<!--    优先使用外部配置文件  -->
+    <properties resource="db.properties">
+        <property name="username" value="root"/>
+        <property name="password" value="dir99"/>
+    </properties>
+
+
+
+<!--    关于起别名：如果实体类少的时候，使用第一种方式
+        实体类多的时候建议使用第二种方式
+        第一种可以diy，第二种则不行.如果非要改，需要在实体类上加注解
+           -->
+
+<!--可以给实体类起别名-->
+<!--    <typeAliases>-->
+<!--        <typeAlias type="pojo.User" alias="User"/>-->
+<!--    </typeAliases>-->
+
+
+<!--    扫描一个包，它的默认别名就是这个类的类名的首字母小写 如果有注解，则别名为注解名-->
+    <typeAliases>
+        <package name="pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+<!--                这个ssl的地方可能是false-->
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+<!--    每一个Mapper.xml都需要在MyBatis核心配置文件中注册！   -->
+    <mappers>
+<!--        <mapper resource="dao/UserMapper.xml"/>-->
+<!--        <mapper class="dao.UserMapper"/>--> 
+<!--        <package name="dao"/>-->
+        <mapper class="mapper.MydictMapper"/>
+        <mapper class="mapper.UserMapper"/>
+    </mappers>
+
+</configuration>
