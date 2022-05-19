@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QueryWordsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="权威版英译汉"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:text="单词:"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            />
+        <EditText
+            android:id="@+id/query_etWord"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="输入要搜索的单词" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/query_btnQuery"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="查询"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/query_tv_explain"/>
+
+</LinearLayout>

@@ -96,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+        //查询用户数据的方法
         user_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -213,7 +214,8 @@ public class LoginActivity extends AppCompatActivity {
                     break;
                 case "200":
                     textView.setText(s+"：登录成功");
-//                    Intent intent  = new Intent()
+                    Intent intent  = new Intent(LoginActivity.this,QueryWordsActivity.class);
+                    startActivity(intent);
                     break;
                 case "300":
                     textView.setText(s+"：该账号已存在");

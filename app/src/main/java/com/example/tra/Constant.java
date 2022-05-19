@@ -10,5 +10,6 @@ public class Constant {
     public static String URL_Register = URL + "LoginServlet/RegisterServlet";
     public static String URL_Login = URL + "LoginServlet/a";
     public static String URL_User=URL+"LoginServlet/selectUser";
+    public static String URL_Word = URL+"LoginServlet/queryWord";
 
 }

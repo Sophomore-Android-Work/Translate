@@ -165,25 +165,25 @@ public class LoginServlet extends HttpServlet {
 
     @RequestMapping("/queryWord")
     public void queryWords(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String code="";
+        String json ="";
 
         //接受传进来的参数
-        String eng = request.getParameter("eng");
+        String eng = request.getParameter("word");
         //打印接受的参数
-        LogUtil.log("eng"+eng);
+        LogUtil.log("word"+eng);
 
         Mydict mydict = mydictService.selectByEng(eng);
 
         if(mydict!=null){
-            code = mydict.getExplain();
+            json = JSON.toJSONString(mydict);;
         }else {
-            code = "null";
+            json = "null";
         }
         response.setContentType("text/html;charset=utf-8"); // 设置响应报文的编码格式
 
         PrintWriter out = response.getWriter();
         //把数据转换成JSON格式的字符串传递到APP
-        String json=JSON.toJSONString(code);
+//        String json=JSON.toJSONString(code);
         out.println(json);
         out.flush();
         out.close();
