@@ -14,13 +14,13 @@ public class User {
 
     }
 
-    public User(int id, String account, String name, String password, String sex, String birth) {
+    public User(int id, String account, String name, String password, String sex, String phone) {
         this.id = id;
         this.account = account;
         this.name = name;
         this.password = password;
         this.sex = sex;
-        this.phone = birth;
+        this.phone = phone;
     }
 
     public String SetUser(){

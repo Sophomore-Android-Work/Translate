@@ -80,8 +80,10 @@ public class LoginServlet extends HttpServlet {
             String account = request.getParameter("userAccount");
             String password = request.getParameter("userPassword");
             String name=request.getParameter("userName");
+            String sex = request.getParameter("sex");
+            String phone = request.getParameter("phone");
             //打印接受的参数
-            LogUtil.log("userAccount:"+account + ";userPassword:" + password+";userName:"+name);
+            LogUtil.log("userAccount:"+account + ";userPassword:" + password+";userName:"+name+";sex:"+sex+";phone:"+phone);
 
             User user = userService.selectUserByAccount(account);
             if(user!=null){
@@ -89,7 +91,7 @@ public class LoginServlet extends HttpServlet {
                     code = 300;
                     //"该账号已存在";
                 } else {
-                userService.InsertUser(new User(0,account,name,password,"",""));
+                userService.InsertUser(new User(0,account,name,password,sex,phone));
                 code = 400;
 //                        //"注册成功";
             }

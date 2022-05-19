@@ -14,7 +14,16 @@ public class User {
 
     }
 
-    public String Setuser(){
+    public User(int id, String account, String name, String password, String sex, String phone) {
+        this.id = id;
+        this.account = account;
+        this.name = name;
+        this.password = password;
+        this.sex = sex;
+        this.phone = phone;
+    }
+
+    public String SetUser(){
 
         return "id:"+id+",账户："+account+",昵称："+name+",密码："+password+",性别："+sex+",生日："+phone;
     }
@@ -57,12 +66,12 @@ public class User {
         this.sex = sex;
     }
 
+
     public String getPhone() {
         return phone;
     }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setBirth(String birth) {
+        this.phone = birth;
     }
 
     @Override
@@ -73,7 +82,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", sex='" + sex + '\'' +
-                ", phone='" + phone + '\'' +
+                ", birth='" + phone + '\'' +
                 '}';
     }
 }

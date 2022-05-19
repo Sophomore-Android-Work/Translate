@@ -1,5 +1,6 @@
 package com.example.tra;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -82,12 +83,15 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!(account.getText().toString().isEmpty())
-                        && !(password.getText().toString().isEmpty())) {
-                    register(account.getText().toString(), password.getText().toString());
-                } else {
-                    Toast.makeText(LoginActivity.this, "账号、密码都不能为空！", Toast.LENGTH_SHORT).show();
-                }
+                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
+
+//                if (!(account.getText().toString().isEmpty())
+//                        && !(password.getText().toString().isEmpty())) {
+//                    register(account.getText().toString(), password.getText().toString());
+//                } else {
+//                    Toast.makeText(LoginActivity.this, "账号、密码都不能为空！", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
@@ -209,6 +213,7 @@ public class LoginActivity extends AppCompatActivity {
                     break;
                 case "200":
                     textView.setText(s+"：登录成功");
+//                    Intent intent  = new Intent()
                     break;
                 case "300":
                     textView.setText(s+"：该账号已存在");
