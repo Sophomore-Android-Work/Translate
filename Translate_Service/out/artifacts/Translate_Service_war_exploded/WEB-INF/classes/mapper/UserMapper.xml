@@ -13,8 +13,8 @@
 
 
     <insert id="InsertUser" parameterType="user">
-        insert into user (id,account,name,password,sex,birth)
-        values (#{id},#{account},#{name},#{password},#{sex},#{birth});
+        insert into user (id,account,name,password,sex,phone)
+        values (#{id},#{account},#{name},#{password},#{sex},#{phone});
     </insert>
 
     <update id="updateUser" parameterType="user">

@@ -17,6 +17,10 @@
         <!--        <property name="bookMapper" ref="bookMapper"/>-->
         <property name="mydictMapper" ref="mydictMapper"/>
     </bean>
+    <bean id="FavoriteServiceImpl" class="service.FavoriteServiceImpl">
+        <!--        <property name="bookMapper" ref="bookMapper"/>-->
+        <property name="favoriteMapper" ref="favoriteMapper"/>
+    </bean>
     <!-- 配置事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <!-- 注入数据库连接池 -->

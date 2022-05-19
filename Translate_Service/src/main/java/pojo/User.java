@@ -8,7 +8,7 @@ public class User {
     private String name;//昵称
     private String password;//密码
     private String sex;//性别
-    private String birth;//生日
+    private String phone;//生日
 
     public User(){
 
@@ -20,12 +20,12 @@ public class User {
         this.name = name;
         this.password = password;
         this.sex = sex;
-        this.birth = birth;
+        this.phone = birth;
     }
 
     public String SetUser(){
 
-        return "id:"+id+",账户："+account+",昵称："+name+",密码："+password+",性别："+sex+",生日："+birth;
+        return "id:"+id+",账户："+account+",昵称："+name+",密码："+password+",性别："+sex+",生日："+phone;
     }
     public int getId() {
         return id;
@@ -68,10 +68,10 @@ public class User {
 
 
     public String getBirth() {
-        return birth;
+        return phone;
     }
     public void setBirth(String birth) {
-        this.birth = birth;
+        this.phone = birth;
     }
 
     @Override
@@ -82,7 +82,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", sex='" + sex + '\'' +
-                ", birth='" + birth + '\'' +
+                ", birth='" + phone + '\'' +
                 '}';
     }
 }

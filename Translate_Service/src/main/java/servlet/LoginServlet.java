@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import pojo.Favorite;
 import pojo.Mydict;
 import pojo.User;
+import service.FavoriteService;
 import service.MydictService;
 import service.UserService;
 import service.UserServiceImpl;
@@ -24,6 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @Controller
 @RequestMapping("/LoginServlet")
@@ -36,6 +39,9 @@ public class LoginServlet extends HttpServlet {
     @Autowired
     @Qualifier("MydictServiceImpl")
     MydictService mydictService;
+    @Autowired
+    @Qualifier("FavoriteServiceImpl")
+    FavoriteService favoriteService;
 
     @GetMapping("/a")
     protected void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -51,7 +57,7 @@ public class LoginServlet extends HttpServlet {
         String pwd = user.getPassword().toString();
         if (user != null && password.equals(pwd)) {
             LogUtil.log("登录成功");
-            code = 200;
+            code = 200;//200表示登录成功
         } else {
             LogUtil.log("登录失败");
             code = 100;
@@ -131,7 +137,31 @@ public class LoginServlet extends HttpServlet {
         out.close();
     }
 
-    @RequestMapping("/query")
+    @RequestMapping("/selectUser")
+    public void selectUserGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String json = "";
+
+        //接受传进来的参数
+        String account = request.getParameter("userAccount");
+//        String password = request.getParameter("userPassword");
+//        String name=request.getParameter("userName");
+        //打印接受的参数
+        LogUtil.log("userAccount:"+account);
+
+        User user = userService.selectUserByAccount(account);
+
+
+        response.setContentType("text/html;charset=utf-8"); // 设置响应报文的编码格式
+
+        PrintWriter out = response.getWriter();
+        //把数据转换成JSON格式的字符串传递到APP
+        json=JSON.toJSONString(user);
+        out.println(json);
+        out.flush();
+        out.close();
+    }
+
+    @RequestMapping("/queryWord")
     public void queryWords(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String code="";
 
@@ -152,6 +182,32 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         //把数据转换成JSON格式的字符串传递到APP
         String json=JSON.toJSONString(code);
+        out.println(json);
+        out.flush();
+        out.close();
+    }
+
+    @RequestMapping("/queryFavorite")
+    public void queryFavorite(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String json="";
+
+        //接受传进来的参数
+        int id = Integer.parseInt(request.getParameter("id"));
+        //打印接受的参数
+        LogUtil.log("id"+id);
+
+        List<Favorite> allFavorite = favoriteService.getAllFavorite(id);
+
+        if(allFavorite!=null){
+            json=JSON.toJSONString(allFavorite);
+        }else {
+            json = "null";
+        }
+        response.setContentType("text/html;charset=utf-8"); // 设置响应报文的编码格式
+
+        PrintWriter out = response.getWriter();
+        //把数据转换成JSON格式的字符串传递到APP
+//        String json=JSON.toJSONString(code);
         out.println(json);
         out.flush();
         out.close();
