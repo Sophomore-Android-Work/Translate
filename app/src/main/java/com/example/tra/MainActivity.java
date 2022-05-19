@@ -2,6 +2,7 @@ package com.example.tra;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mean;
     private EditText in;
     private Button sure;
+    private Button btnLogin;//登录按钮
 
     private Spinner  spinnerCardNumber_begin;
     private static final String[] m_languages = { "英语", "文言文", "粤语", "中文简体","中文繁体","日语","法语","韩语","西班牙语","泰语","阿拉伯语","俄语","德语" };
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         recordsList = recordsDao.getRecordsList();
         recordsAdapter = new RecordAdapter(MainActivity.this,R.layout.list_item,recordsList);
         clearRecords_tv = (TextView)findViewById(R.id.clearReocrds_tv);
+        btnLogin = (Button)findViewById(R.id.btn_login);//找到btn_login
 
 
         records_lv.setAdapter(recordsAdapter);
@@ -90,6 +93,15 @@ public class MainActivity extends AppCompatActivity {
             }).start();
 
             initView(str,lan);
+        });
+
+        //登录按钮的点击事件
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
         });
 
         //点击后将数据放入edittext

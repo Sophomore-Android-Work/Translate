@@ -56,6 +56,14 @@
             />
     </LinearLayout>
 
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="登录"
+            android:id="@+id/btn_login"/>
+
+
 <!--以下为历史记录代码-->
     <ListView
         android:id="@+id/search_record_lv"
@@ -76,5 +84,7 @@
         android:visibility="gone"
         android:text="清除历史记录"
         android:textSize="12sp" />
+
+
 
 </LinearLayout>
