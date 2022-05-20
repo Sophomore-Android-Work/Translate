@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String APP_ID = "20220316001127882";
     private static final String SECURITY_KEY = "HXSCfrvdqfLwz0_88U0B";
-    private TextView mean;
+    private EditText mean;
     private EditText in;
     private Button sure;
     private Button btnLogin;//登录按钮
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initView(String str,String lan) {
-        mean=(TextView) findViewById(R.id.mean);
+        mean=(EditText) findViewById(R.id.mean);
         in=(EditText) findViewById(R.id.in);
         sure=(Button) findViewById(R.id.sure);
         records_lv=(ListView)findViewById(R.id.search_record_lv) ;

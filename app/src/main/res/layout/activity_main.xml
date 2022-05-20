@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/mean"
         android:layout_height="100dp"
+        android:hint="Result"
+android:textColor="@color/black"
 
-        android:text="查询结果"
         android:layout_width="match_parent"
         android:textSize="12dp" />
 
