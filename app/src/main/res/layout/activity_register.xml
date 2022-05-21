@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,145 +7,192 @@
     android:orientation="vertical"
     tools:context=".RegisterActivity">
 
-    <LinearLayout
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:text="账号:"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            />
-        <EditText
-            android:id="@+id/reg_account"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="账户" />
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:background="@drawable/img" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:text="密码:"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            />
-        <EditText
-            android:id="@+id/reg_password"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="密码" />
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账    号:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+
+                android:id="@+id/reg_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="账号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密    码:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/reg_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="密码" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名:"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/reg_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="输入用户名" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性    别:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/reg_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="性别" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/reg_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="手机号" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/reg_getCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:text="获取验证码"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/reg_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="输入验证码后点击注册" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reg_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:text="注册"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:text="密码:"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            />
-        <EditText
-            android:id="@+id/reg_username"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="输入用户名"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:text="性别 :"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            />
-        <EditText
-            android:id="@+id/reg_sex"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="性别" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:text="手机号:"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            />
-        <EditText
-            android:id="@+id/reg_phone"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="手机号" />
-    </LinearLayout>
-
-
-
-
-    <Button
-        android:id="@+id/reg_getCheck"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="获取验证码" />
-
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:text="验证码:"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            />
-        <EditText
-            android:id="@+id/reg_check"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="输入验证码后点击注册" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/reg_register"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="注册" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_info"/>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
