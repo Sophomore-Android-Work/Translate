@@ -12,18 +12,17 @@
         <entry key="..\:/GitHub/T001/Translate/app/src/main/res/layout/list_item.xml" value="0.30416666666666664" />
         <entry key="..\:/Users/10315/Desktop/tra/app/src/main/res/layout/activity_main.xml" value="0.192481884057971" />
         <entry key="..\:/Users/10315/Desktop/安卓项目/tra/app/src/main/res/layout/activity_main.xml" value="0.192481884057971" />
-        <entry key="..\:/Users/DELL/Desktop/files/android_shiyan/Translate/app/src/main/res/drawable/edit_bg.xml" value="0.2155" />
-        <entry key="..\:/Users/DELL/Desktop/files/android_shiyan/Translate/app/src/main/res/drawable/spinner_border.xml" value="0.2155" />
-        <entry key="..\:/Users/DELL/Desktop/files/android_shiyan/Translate/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/DELL/Desktop/files/android_shiyan/Translate/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/DELL/Desktop/files/android_shiyan/Translate/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/github-push/Translate2/Translate/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
         <entry key="..\:/github-push/Translate2/Translate/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/github-push/Translate2/Translate/app/src/main/res/layout/activity_query_words.xml" value="0.25364583333333335" />
         <entry key="..\:/github-push/Translate2/Translate/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/github-push/Translate2/Translate/app/src/main/res/layout/list_item.xml" value="0.1125" />
+        <entry key="app/src/main/res/drawable/edit_bg.xml" value="0.2455" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.35260416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="app/src/main/res/layout/activity_query_words.xml" value="0.26268115942028986" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.26268115942028986" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.26268115942028986" />
       </map>
     </option>
   </component>

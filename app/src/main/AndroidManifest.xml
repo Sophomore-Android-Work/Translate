@@ -14,9 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tra" >
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/editBg" />
+<!--        <meta-data-->
+<!--            android:name="com.google.android.actions"-->
+<!--            android:resource="@xml/editBg" />-->
 
         <activity
             android:name=".QueryWordsActivity"
