@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tra">
+    package="com.example.tra" >
+
     <!-- 网络权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,14 +13,18 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Tra">
+        android:theme="@style/Theme.Tra" >
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/editBg" />
+
         <activity
             android:name=".QueryWordsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +34,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,7 +44,7 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
