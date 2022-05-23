@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/img" />
+        android:background="@drawable/bg_login" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,10 +21,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/green"
+            android:background="@color/yellow"
             android:gravity="center"
             android:text="注册"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="30sp" />
 
         <LinearLayout
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="账    号:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <EditText
@@ -47,7 +47,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:hint="账号" />
+                android:hint="账号"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
@@ -62,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:text="密    码:"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <EditText
@@ -70,7 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:hint="密码" />
+                android:hint="密码"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
@@ -84,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="用户名:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <EditText
@@ -92,7 +94,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:hint="输入用户名" />
+                android:hint="输入用户名"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
@@ -107,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:text="性    别:"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <EditText
@@ -115,7 +118,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:hint="性别" />
+                android:hint="性别"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
@@ -130,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:text="手机号:"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <EditText
@@ -138,19 +142,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:hint="手机号" />
+                android:hint="手机号"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
 
         <Button
             android:id="@+id/reg_getCheck"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
             android:text="获取验证码"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:background="@drawable/btn_login"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -164,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:text="验证码:"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <EditText
@@ -172,18 +178,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:hint="输入验证码后点击注册" />
+                android:hint="输入验证码后点击注册"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <Button
             android:id="@+id/reg_register"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
             android:text="注册"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:background="@drawable/btn_login"/>
 
         <TextView
             android:id="@+id/tv_info"
