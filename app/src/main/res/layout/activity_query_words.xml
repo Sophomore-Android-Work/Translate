@@ -1,52 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".QueryWordsActivity">
-
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="权威版英译汉"
-        android:textSize="35dp"
-        android:textAlignment="center"
-        />
-
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_search" />
     <LinearLayout
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:text="单词:"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            />
-        <EditText
-            android:id="@+id/query_etWord"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="输入要搜索的单词" />
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            android:gravity="center"
+            android:text="权威版英译汉"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:text="单词:"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/query_etWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:hint="输入要搜索的单词" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/query_btnQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:text="查询" />
+
+        <TextView
+            android:id="@+id/query_tv_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/query_btnQuery"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:text="查询"
-        android:layout_gravity="center"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/query_tv_explain"/>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

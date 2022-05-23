@@ -24,7 +24,7 @@
                 android:layout_gravity="center"
                 android:text="Welcome"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp"/>
+                android:textSize="20sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,7 +88,9 @@
         android:layout_weight="1"
         android:layout_marginBottom="10dp"
         android:background="@drawable/buttonstyle"
-        android:text="登录" />
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/register"
@@ -99,7 +101,9 @@
         android:layout_marginBottom="10dp"
         android:layout_weight="1"
         android:background="@drawable/buttonstyle"
-        android:text="注册" />
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/user_list"
@@ -110,7 +114,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:layout_weight="1"
-        android:background="@drawable/buttonstyle"/>
+        android:background="@drawable/buttonstyle"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
 </LinearLayout>
     </LinearLayout>
 </LinearLayout>
