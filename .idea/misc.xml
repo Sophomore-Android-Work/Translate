@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.192" />
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/drawable/buttonstyle.xml" value="0.192" />
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/drawable/edit_bg.xml" value="0.192" />
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/layout/activity_login.xml" value="0.24947916666666667" />
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/layout/activity_query_words.xml" value="0.24947916666666667" />
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/layout/activity_register.xml" value="0.24947916666666667" />
+        <entry key="..\:/Android Studio/App/Translation00/Translate/app/src/main/res/layout/list_item.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidProjectsFromOutside/tra/tra/app/src/main/res/layout/activity_main.xml" value="0.21422101449275363" />
         <entry key="..\:/AndroidProjectsFromOutside/tra/tra/app/src/main/res/layout/list_item.xml" value="0.21422101449275363" />
         <entry key="..\:/GitHub/T001/Translate/app/src/main/res/layout/activity_login.xml" value="0.30416666666666664" />
