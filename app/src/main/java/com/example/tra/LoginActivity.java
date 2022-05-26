@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.fastjson.JSON;
+import com.example.tra.history.Final_user;
 import com.example.tra.pojo.User;
 
 
@@ -214,6 +215,7 @@ public class LoginActivity extends AppCompatActivity {
                     break;
                 case "200":
                     textView.setText(s+"：登录成功");
+                    Final_user.setUser_Account(account.getText().toString());
                     Intent intent  = new Intent(LoginActivity.this,QueryWordsActivity.class);
                     startActivity(intent);
                     break;

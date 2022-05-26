@@ -19,7 +19,7 @@
 
     <update id="updateUser" parameterType="user">
         update user
-        set password = #{password}
+        set password = #{password},SchemeId = #{SchemeId}
         where account = #{account};
     </update>
 </mapper>

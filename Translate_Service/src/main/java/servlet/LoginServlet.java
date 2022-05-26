@@ -111,14 +111,16 @@ public class LoginServlet extends HttpServlet {
 
         //接受传进来的参数
         String account = request.getParameter("userAccount");
-        String password = request.getParameter("userPassword");
+//        String SchemeId = request.getParameter("SchemeId");
         String name=request.getParameter("userName");
+        String password = request.getParameter("userPassword");
         //打印接受的参数
         LogUtil.log("userAccount:"+account + ";userPassword:" + password+";userName:"+name);
-
+//        LogUtil.log("userAccount:"+account + ";SchemeId:" + SchemeId);
         User user = userService.selectUserByAccount(account);
 
         if(user!=null){
+            user.setName(name);
             user.setPassword(password);
             //能查到该账号，说明已经注册过了
             userService.updateUser(user);

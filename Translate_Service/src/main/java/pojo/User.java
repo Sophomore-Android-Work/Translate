@@ -10,6 +10,7 @@ public class User {
     private String sex;//性别
     private String phone;//生日
 
+    private int SchemeId;
     public User(){
 
     }
@@ -72,6 +73,14 @@ public class User {
     }
     public void setBirth(String birth) {
         this.phone = birth;
+    }
+
+    public int getSchemeId() {
+        return SchemeId;
+    }
+
+    public void setSchemeId(int schemeId) {
+        SchemeId = schemeId;
     }
 
     @Override

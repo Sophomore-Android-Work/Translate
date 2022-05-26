@@ -2,6 +2,7 @@ package com.example.tra;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
+import com.example.tra.history.Tindividuation;
 import com.example.tra.pojo.Mydict;
 import com.example.tra.pojo.User;
 
@@ -25,7 +27,7 @@ import java.net.URL;
 public class QueryWordsActivity extends AppCompatActivity {
 
     EditText etWord ;
-    Button queryWord;
+    Button queryWord,Scheme;
     TextView tvExplain;
 
     private Handler handler=new Handler(new Handler.Callback() {
@@ -56,6 +58,15 @@ public class QueryWordsActivity extends AppCompatActivity {
         etWord = (EditText) findViewById(R.id.query_etWord);
         queryWord = (Button) findViewById(R.id.query_btnQuery);
         tvExplain = (TextView) findViewById(R.id.query_tv_explain);
+        Scheme = findViewById(R.id.Scheme);
+
+        Scheme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(QueryWordsActivity.this, Tindividuation.class);
+                startActivity(intent);
+            }
+        });
 
         queryWord.setOnClickListener(new View.OnClickListener() {
             @Override
